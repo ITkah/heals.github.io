@@ -1,0 +1,195 @@
+header {
+    .container {
+        padding: 40px 0;
+        @media (max-width: 990px) {
+            padding: 20px 0;
+        }
+    }
+    position: relative;
+}
+
+.logo {
+    display: block;
+    height: 200px;
+    object-fit: contain;
+    @media (max-width: 990px) {
+        height: 100px;
+        margin-bottom: 10px;
+    }
+}
+
+.search_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    img {
+        height: 20px;
+    }
+}
+
+.burger_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    display: none;
+    @media (max-width: 990px) {
+        display: flex;
+    }
+    img {
+        height: 20px;
+    }
+}
+
+.header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 990px) {
+        flex-direction: column;
+    }
+}
+
+.header_nav {
+    display: flex;
+    flex-direction: column;
+    .header_panel {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 30px;
+        @media (max-width: 990px) {
+            margin: 0;
+            justify-content: center;
+        }
+        .panel_link {
+            margin-right: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a {
+                margin: 0 5px;
+                color: #000;
+                text-decoration: none;
+                color: #666666;
+                font: 1.4rem 'Arial Narrow', arial;
+                @media (max-width: 990px) {
+                    font: 1.25rem 'Arial Narrow', arial;
+                }
+                @media (max-width: 576px) {
+                    font: .87rem 'Arial Narrow', arial;
+                }
+            }
+        }
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 99;
+        position: relative;
+        @media (max-width: 990px) {
+            display: none;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 100%;
+            background: #fff;
+        }
+        ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            justify-content: space-between;
+            @media (max-width: 990px) {
+                flex-direction: column;
+                align-items: flex-start;
+                box-sizing: border-box;
+            }
+            .arrow_mob {
+                height: 15px;
+                width: 15px;
+                display: block;
+                position: absolute;
+                right: -8px;
+                top: 10px;
+                @media (max-width: 990px) {
+                    right: 5px;
+                    height: 30px;
+                    width: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    top: 0;
+                }
+                &::before {
+                    content: '';
+                    background: url(../img/header/arr.svg) no-repeat center center;
+                    background-size: 12px 12px;
+                    height: 12px;
+                    width: 12px;
+                    display: block;
+                    @media (max-width: 990px) {
+                        background-size: 17px 17px;
+                        height: 17px;
+                        width: 17px;
+                    }
+                }
+            }
+            li {
+                position: relative;
+                @media (max-width: 990px) {
+                    display: block;
+                    box-sizing: border-box;
+                    width: 100%;
+                }
+                &:hover {
+                    .sub-menu {
+                        opacity: 1;
+                    }
+                }
+                a {
+                    font: 1.4rem 'Arial Narrow', arial;
+                    color: #000;
+                    text-decoration: none;
+                    padding: 0 15px;
+                    @media (max-width: 990px) {
+                        padding: 5px 12px;
+                        box-sizing: border-box;
+                        display: block;
+                        width: 100%;
+                        font: 1.125rem 'Arial Narrow', arial;
+                    }
+                }
+            }
+            li:last-child {
+                a {
+                    padding-right: 0;
+                }
+            }
+            .sub-menu {
+                position: absolute;
+                opacity: 0;
+                top: 110%;
+                width: 100%;
+                left: 0;
+                padding: 10px 5px;
+                @media (max-width: 990px) {
+                    opacity: 1;
+                    padding: 0;
+                    left: 20px;
+                    top: 0;
+                    position: relative;
+                    display: none;
+                }
+                li {
+                    a {
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

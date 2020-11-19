@@ -1,0 +1,58 @@
+.title_shop {
+    text-transform: uppercase;
+    text-align: center;
+    font: 3.3rem 'Arial Narrow', arial;
+    margin-bottom: 45px;
+    @media (max-width: 990px) {
+        font: 2.25rem 'Arial Narrow', arial;
+        margin-bottom: 30px;
+    }
+    @media (max-width: 576px) {
+        font: 1.9rem 'Arial Narrow', arial;
+        margin-bottom: 25px;
+    }
+}
+
+.shop_wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    @media (max-width: 1400px) {
+        grid-gap: 15px;
+    }
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.shop_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px;
+    border: 2px solid #93b385;
+    transition: .3s;
+    @media (max-width: 1400px) {
+        padding: 40px;
+    }
+    @media (max-width: 990px) {
+        padding: 30px;
+    }
+    &:hover {
+        transform: scale(1.05);
+    }
+    img {
+        max-width: 100%;
+        height: 200px;
+        object-fit: contain;
+        @media (max-width: 990px) {
+            height: 125px;
+        }
+        @media (max-width: 576px) {
+            height: 150px;
+        }
+    }
+}
